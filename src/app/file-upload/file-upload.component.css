@@ -1,0 +1,79 @@
+.uploadSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    background-color: #7e99a8;
+    grid-auto-flow: column;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    background-image: url("https://d1m75rqqgidzqn.cloudfront.net/wp-data/2022/01/04101856/iStock-1090046326.jpg");
+    background-size: 100%;
+  }
+
+
+
+
+.uploadSection .uploadBanner img{
+    width: 100%;
+
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes movableimage {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to{
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes moveleft {
+    from {
+        left: 20%;
+        opacity: 0;
+    }
+    to { left: -30%;
+        opacity: 1  ;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.uploadDialog{
+    width: 500px;
+    box-shadow: 5px 10px 5px 1px rgba(50,50,50,0.3);
+    border-radius: 5px;
+
+}
+
+.uploadDialog mat-card {
+    padding: 30px;
+    /* background-color: rgba(137,207,240,0.8); */
+    background-color: #D4F1F4;
+}
+
+.uploadDialog mat-card mat-card-title {
+    margin-bottom : 10px;
+}
+
+.uploadDialog mat-card mat-form-field {
+    margin-top : 10px;
+}
+
+.uploadDialog mat-card mat-form-field mat-icon:hover {
+    cursor: pointer;
+}

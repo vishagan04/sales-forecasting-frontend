@@ -1,0 +1,47 @@
+<div class="analysisSection">
+
+    <div class="analysisTitle">
+        <h1>Sales Prediction Analysis</h1>
+    </div>
+
+    <div class="analysisNavigation">
+        <mat-button-toggle-group appearance="legacy" [formControl]="buttonToggler" name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="graph">Graph</mat-button-toggle>
+            <mat-button-toggle value="table">Table</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+    <div *ngIf="buttonToggler.value === 'graph'" class="analysisView">
+        <img src={{imagename}} />
+        <div>
+            <p>Base64URL (click to copy)</p>
+            <p (click)="copyToclipboard()">{{imagename}}</p>
+        </div>
+    </div>
+
+    <div *ngIf="buttonToggler.value === 'table'" class="analysisTable">
+        <table>
+            <tr>
+                <th>S.no</th>
+                <th>Date</th>
+                <th>Sales</th>
+                <th>Forecast</th>
+            </tr>
+            <tr *ngFor="let d of csvdata; let i = index">
+                <td>{{i + 1}}</td>
+                <td [width]="300">{{d.date}}</td>
+                <td [width]="300">{{d.sales}}</td>
+                <td [width]="300">{{d.forecast  || 'NaN'}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="anaylsisExport">
+
+
+        <angular2csv [data]="csvdata" filename="result" [options]="options"></angular2csv>
+        <p>Click the download button to download the result.csv</p>
+        <a href="https://app.powerbi.com/groups/me/reports/2b22386d-9b8a-4055-83a6-b08ef7dddfc5/ReportSection?redirectedFromSignup=1,1" target="_blank">
+          <button> Power BI viz</button>
+        </a>
+    </div>
+</div>

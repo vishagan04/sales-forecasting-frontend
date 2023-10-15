@@ -1,0 +1,122 @@
+.loginSection {
+  height: 100vh;
+  background: rgb(134,86,176);
+  background: linear-gradient(90deg, rgba(134,86,176,1) 0%, rgba(121,9,96,1) 42%, rgba(0,212,255,1) 100%);
+
+  /* background-image: url("https://d1m75rqqgidzqn.cloudfront.net/wp-data/2022/01/04101856/iStock-1090046326.jpg");
+  background-size: 100%; */
+}
+
+
+
+.loginSection .loginBanner img{
+  width: 100%;
+  animation: movableimage 2s ease-in;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes movableimage {
+  from {
+      left: -100%;
+      opacity: 0;
+  }
+  to{
+      left: 0px;
+      opacity: 1;
+  }
+}
+
+.Heading{
+  font-size: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.loginPage{
+  width: 500px;
+  height: 294px;
+  border-radius: 5px;
+  position: relative;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%,-50%);
+  border: solid 1px black;
+}
+
+.loginPage mat-card {
+  background-color: rgba(255,255,255,0.8);
+}
+
+
+.loginPage mat-card input:-webkit-autofill,
+.loginPage mat-card input:-webkit-autofill:hover,
+.loginPage mat-card input:-webkit-autofill:focus{
+  border: none;
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0 1000px #deecf2 inset;
+}
+
+.loginPage mat-card-header {
+  justify-content: center;
+}
+
+.loginPage mat-card-actions:last-child{
+  text-align: right;
+  margin-right: 20px;
+}
+
+@keyframes moveleft {
+  from {
+      left: 20%;
+      opacity: 0;
+  }
+  to { left: -30%;
+      opacity: 1  ;
+  }
+}
+
+@keyframes moveright {
+  0% {
+      left: -30%;
+  }
+  20% { left: 8%;
+  }
+  100% {
+      transform: scale(3);
+  }
+}
+
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.input-email{
+  margin-top: 30px;
+}
+
+.example-full-width {
+width: 100%;
+}
+
+.btn-submit{
+  background-color: #0d8a63;
+}
+
+.Page-heading{
+  text-align: center;
+  font-size: 60px;
+  padding-top: 50px;
+  color: white;
+}
